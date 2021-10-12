@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZIC - Zero Investment Calculator for Nepse</title>
+    <link rel="stylesheet" href="design.css" />
+  </head>
+  <body>
+    <div class="coloumn">
+      <h2>Zero Investment Calculator</h2>
+
+      <label id="lbBuy" class="inLabel">Buying Price</label>
+      <input type="number" min="0" id="inBuy" class="inPeasent" required />
+
+      <label id="lbBuyUnit" class="inLabel">Unit of Shares Bought</label>
+      <input type="number" min="0" id="inBuyUnit" class="inPeasent" required />
+
+      <label id="lbSell" class="inLabel">Selling Price</label>
+      <input type="number" min="0" id="inSell" class="inPeasent" required />
+
+      <label id="lbSellUnit" class="inLabel">Units to Sell</label>
+      <input type="number" min="0" id="inSellUnit" class="inPeasent" required />
+
+      <button id = "inCalc"> Calculate </button>
+
+      <!-- user info from here on -->
+      <div class="row">
+        <label class="descLabel">Sebon&nbsp;Commission</label>
+        <label id="descSebon" class="ansLabel">Rs 0</label>
+      </div>
+      <div class="row">
+        <label class="descLabel"
+          >Broker&nbsp;Commission&nbsp;</label
+        >
+        <label id="descBrokerCom" class="ansLabel">Rs 0</label>
+      </div>
+      <div class="row">
+        <label class="descLabel">DP&nbsp;Fee</label>
+        <label id="descDP" class="ansLabel">Rs 50</label>
+      </div>
+      <!-- Capital gain info -->
+      <div class="coloumn">
+        <label id="Cappa">Capital&nbsp;Gain</label>
+        <label id="descCapGain" class="ansLabel">Rs 0</label>
+        <div class="row">
+            <input
+          type="radio"
+          id="cgSeven"
+          name="capGain"
+          value="0.075"
+          class="inRadio"
+          checked="checked"
+            />
+            <label class="inCap" for="cgSeven">7.5%</label>
+            <input
+          type="radio"
+          id="cgFive"
+          name="capGain"
+          value="0.05"
+          class="inRadio"
+            />
+            <label class="inCap" for="cgFive">5%</label>
+            
+        </div>
+      </div>  
+
+      <div class="row">
+        <label class="descLabel">Payable&nbsp;Amount</label>
+        <label id="descPayAmt" class="ansLabel">Rs 0</label>
+      </div>
+
+      <div class="row">
+        <label class="descLabel">Receivable&nbsp;Amount</label>
+        <label id="descRecAmt" class="ansLabel">Rs 0</label>
+      </div>
+
+      <div class="row">
+        <label id="profitLoss" class="descLabel">Loss</label>
+        <label id="descLoss" class="ansLabel">Rs 25</label>
+      </div>
+      <p class="infoMen">The values of Sebon Commission, Broker Commission and the DP fee are shown as: <br>
+        values when buying + values when selling <br>
+        The DP fee is Rs 25 (50 = 25 when buying and selling)<br>
+        The sebon commission and the broker commission depends on the buying and selling price.</p>
+    </div>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
