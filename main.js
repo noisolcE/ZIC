@@ -77,5 +77,12 @@ if (sellFinal >= buyFinal) {
     document.getElementById('descPayAmt').innerHTML = "Rs " + (buyFinal).toFixed(2);
     document.getElementById('descRecAmt').innerHTML = "Rs " + finalAmount.toFixed(2);
 
+if (sellUnit>buyUnit) {
+    document.getElementById('warnUnit').innerHTML = "You are selling more units than you are buying!"
+} else {
+    document.getElementById('warnUnit').innerHTML = "&nbsp;"
+}
+
+
 })
 
